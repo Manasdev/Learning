@@ -1,0 +1,41 @@
+﻿@model IEnumerable<OrderToFood.Models.RestaurantReview>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(reviewDetail => reviewDetail.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(reviewDetail => reviewDetail.ReviewBody)
+        </th>
+        <th>
+            @Html.DisplayNameFor(reviewDetail => reviewDetail.ReviewerName)
+        </th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(reviewDetail => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(reviewDetail => item.ReviewBody)
+            </td>
+            <td>
+                @Html.DisplayFor(reviewDetail => item.ReviewerName)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
