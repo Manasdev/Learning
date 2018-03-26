@@ -11,16 +11,12 @@ namespace OrderToFood.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(OrderToFood.Models.OrderFoodDB context)
         {
-            for (int i = 0; i < 1000; i++)
-            {
-                context.Restaurants.Add(new Models.Restaurant { City = "Mysore", Country = "India", Name = i + "_Nalpak_", Reviews = new List<RestaurantReview> { new RestaurantReview { Rating = 9, ReviewBody = "Awesome", ReviewerName = "Koole" } } });
-                context.SaveChanges();
-            }
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

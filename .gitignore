@@ -1,5 +1,9 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
+/Learning/.vs
+/Projects/OrderToFood/.vs/
 /Projects/OrderToFood/.vs/OrderToFood/v15
+/Projects/OrderToFood/.vs/OrderToFood/OrderToFood/bin
+/Projects/OrderToFood/.vs/OrderToFood/OrderToFood/obj
+
